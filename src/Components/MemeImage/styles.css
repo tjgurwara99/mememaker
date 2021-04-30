@@ -1,5 +1,5 @@
-#meme-image-container {
-    display: flex;
+#popup-window {
+    position: relative;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -37,6 +37,18 @@
 }
 
 #meme-image {
-    width: 30rem;
+    width: 35rem;
     height: auto;
+}
+
+.text-box1 {
+    position: absolute;
+    top: 50px;
+    left: 220px;
+}
+
+.text-box2 {
+    position: absolute;
+    bottom: 30%;
+    left: 19%;
 }

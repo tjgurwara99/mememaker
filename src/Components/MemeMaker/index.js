@@ -1,7 +1,5 @@
 import React from "react";
-
 import MemeImage from "../MemeImage";
-
 
 const MemeMaker = () => {
     return (
