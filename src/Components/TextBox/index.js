@@ -13,8 +13,8 @@ const TextBox = (props) => {
         <div className="meme-controls" >
             {
                 props.meme.textBoxes.map((textBox, index) => (
-                    <>
-                    <div className="input-controller" key={`input-${index}`}>
+                    <div key={index}>
+                    <div className="input-controller">
                         <Button onClick={() => {
                             let temp = {...props.meme};
                             temp.textBoxes[index].top = textBox.top - 5;
@@ -52,7 +52,7 @@ const TextBox = (props) => {
                             <ExpandMoreIcon />
                         </Button>
                     </div>
-                    <div className="input-navigation" key={`navigation-${index}`}>
+                    <div className="input-navigation" >
                         <div className="input-rotaters">
                             <button>
                                 <RotateLeftIcon />
@@ -79,7 +79,7 @@ const TextBox = (props) => {
                             </div>
                         </div>
                     </div>
-                    </>
+                    </div>
                 ))
             }           
         </div>

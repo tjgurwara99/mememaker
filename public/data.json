@@ -5,35 +5,39 @@
         "boxCount": 4,
         "textBoxes": [
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 160,
+                "top": 80,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             },
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 400,
+                "top": 80,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             },
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 160,
+                "top": 240,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             },
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 400,
+                "top": 240,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             }
         ]
@@ -44,11 +48,12 @@
         "boxCount": 1,
         "textBoxes": [
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 220,
+                "top": 425,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             }
         ]
@@ -59,11 +64,12 @@
         "boxCount": 1,
         "textBoxes": [
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 300,
+                "top": 250,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             }
         ]
@@ -74,27 +80,30 @@
         "boxCount": 3,
         "textBoxes": [
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 380,
+                "top": 220,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             },
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 300,
+                "top": 200,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             },
             {
-                "left": "80px",
-                "top": "80px",
+                "text": "Text 1",
+                "left": 120,
+                "top": 250,
                 "font": {
                     "type": "Normal",
-                    "size": "12px"
+                    "size": 12
                 }
             }
         ]
@@ -105,16 +114,18 @@
         "boxCount": 2,
         "textBoxes": [
             {
-                "left": 150,
-                "top": 370,
+                "text": "Text 1",
+                "left": 350,
+                "top": 125,
                 "font": {
                     "type": "Normal",
                     "size": "12px"
                 }
             },
             {
-                "left": 300,
-                "top": 370,
+                "text": "Text 2",
+                "left": 350,
+                "top": 350,
                 "font": {
                     "type": "Normal",
                     "size": "12px"
@@ -128,19 +139,21 @@
         "boxCount": 2,
         "textBoxes": [
             {
-                "left": "80px",
-                "top": "20px",
+                "text": "Text 1",
+                "left": 210,
+                "top": 20,
                 "font": {
                     "type": "shadowed",
-                    "size": "45px"
+                    "size": 45
                 }
             },
             {
-                "left": "380px",
-                "top": "180px",
+                "text": "Text 1",
+                "left": 210,
+                "top": 250,
                 "font": {
                     "type": "shadowed",
-                    "size": "45px"
+                    "size": 45
                 }
             }
         ]

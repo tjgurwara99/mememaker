@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import CloseIcon from '@material-ui/icons/Close';
 import TextBox from "../TextBox";
@@ -6,6 +6,10 @@ import Capture from "../Capture";
 
 const ModalPopup = (props) => {
   const [meme, setMeme] = useState(props.meme);
+
+  useEffect(() => {
+    setMeme(props.meme)
+  }, [props.meme])
 
   return (
       <div id="popup-window">

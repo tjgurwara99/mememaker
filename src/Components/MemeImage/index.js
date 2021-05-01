@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import { saveAs } from "file-saver";
 import domtoimage from "dom-to-image";
 import ModalPopup from "../ModalPopup";
@@ -9,65 +9,15 @@ import "./styles.css";
 const MemeImage = (props) => {
   const [overlayClass, setOverlayClass] = useState("overlay-hidden");
 
-  const [selectedMeme, setSelectedMeme] = useState({
-    active: true,
-    src: "images/Drake-Hotline-Bling.jpg",
-    boxCount: 2,
-    textBoxes: [
-        {
-            text: "Text 1",
-            left: 350,
-            top: 150,
-            font: {
-                type: "Normal",
-                size: "12px"
-            }
-        },
-        {
-            text: "Text 2",
-            left: 350,
-            top: 350,
-            font: {
-                type: "Normal",
-                size: "12px"
-            }
-        }
-    ]
-  });
-
-  useEffect(() => {
-    setSelectedMeme({
-      active: true,
-      src: "images/Drake-Hotline-Bling.jpg",
-      boxCount: 2,
-      textBoxes: [
-          {
-              text: "Text 1",
-              left: 350,
-              top: 150,
-              font: {
-                  type: "Normal",
-                  size: "12px"
-              }
-          },
-          {
-              text: "Text 2",
-              left: 350,
-              top: 350,
-              font: {
-                  type: "Normal",
-                  size: "12px"
-              }
-          }
-      ]
-    })
-  }, [])
+  const [selectedMeme, setSelectedMeme] = useState({textBoxes: []});
 
   // handleModalPopup is a simple handler for the popup overlay.
-  const handleModalPopup = () => {
-    if (overlayClass === "overlay-hidden") setOverlayClass("overlay");
-    else setOverlayClass("overlay-hidden");
-  };
+  const handleModalPopup = useCallback(() => {
+      if (overlayClass === "overlay-hidden") {
+        setOverlayClass("overlay");
+      }
+      else setOverlayClass("overlay-hidden");
+  }, [overlayClass])
 
   // handleScreenshot is a handler for the button to download the image that we worked on.
   const handleScreenshot = () => {
@@ -79,7 +29,7 @@ const MemeImage = (props) => {
 
   return (
     <>
-      <ImageList setMeme={setSelectedMeme}/>
+      <ImageList setMeme={setSelectedMeme} openModal={handleModalPopup}/>
 
       <button onClick={handleModalPopup}>Show</button>
 

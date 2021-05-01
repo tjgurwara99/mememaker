@@ -17,7 +17,7 @@ const ImageList = (props) => {
         }
         fetchData();
     }, [])
-    
+
     return (
         <>
             <div id="meme-image-list">
@@ -32,7 +32,13 @@ const ImageList = (props) => {
                             "outline":"none",
                             "background": "transparent",
                         }}
-                        onClick={props.setMeme(image)}
+                        onClick={
+                            () => {
+                                let temp = {...image};
+                                props.setMeme(temp);
+                                props.openModal();
+                            }
+                        }
                         >
                             <ImageThumbnail src={image.src} key={image.src}/>
                         </button>
