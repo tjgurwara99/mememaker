@@ -15,6 +15,7 @@ const MemeImage = (props) => {
     boxCount: 2,
     textBoxes: [
         {
+            text: "Text 1",
             left: 350,
             top: 150,
             font: {
@@ -23,6 +24,7 @@ const MemeImage = (props) => {
             }
         },
         {
+            text: "Text 2",
             left: 350,
             top: 350,
             font: {
@@ -77,7 +79,7 @@ const MemeImage = (props) => {
 
   return (
     <>
-      <ImageList />
+      <ImageList setMeme={setSelectedMeme}/>
 
       <button onClick={handleModalPopup}>Show</button>
 

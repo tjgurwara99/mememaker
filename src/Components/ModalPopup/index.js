@@ -5,13 +5,18 @@ import TextBox from "../TextBox";
 import Capture from "../Capture";
 
 const ModalPopup = (props) => {
+  const [meme, setMeme] = useState(props.meme);
+
   return (
       <div id="popup-window">
         <Button onClick={props.popupHandler} style={{position: "fixed", right: "20px"}}>
           <CloseIcon />
         </Button>
-        <Capture meme={props.meme}/>
-        <TextBox screenshotHandler={props.screenshotHandler}/>
+        <Capture meme={meme}/>
+        <TextBox screenshotHandler={props.screenshotHandler} meme={meme} setMeme={setMeme} />
+        <div className="meme-buttons">
+            <Button variant="contained" onClick={props.screenshotHandler}>Download Meme</Button>
+        </div>
       </div>
   )
 }

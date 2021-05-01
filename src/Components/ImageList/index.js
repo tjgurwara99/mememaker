@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ImageThumbnail from "../ImageThumbnail";
 
-const ImageList = () => {
+const ImageList = (props) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -16,22 +16,24 @@ const ImageList = () => {
             setData(data);
         }
         fetchData();
-    })
+    }, [])
     
     return (
         <>
             <div id="meme-image-list">
                 {
-                    data.map(image => (
-                        <button style={{
-                            "background-color": "Transparent",
-                            "background-repeat":"no-repeat",
+                    data.map((image, index) => (
+                        <button key={index} style={{
+                            "backgroundcolor": "Transparent",
+                            "backgroundRepeat":"no-repeat",
                             "border": "none",
                             "cursor":"pointer",
                             "overflow": "hidden",
                             "outline":"none",
                             "background": "transparent",
-                        }}>
+                        }}
+                        onClick={props.setMeme(image)}
+                        >
                             <ImageThumbnail src={image.src} key={image.src}/>
                         </button>
                         
