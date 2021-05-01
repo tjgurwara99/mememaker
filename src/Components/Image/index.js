@@ -3,7 +3,7 @@ import "./styles.css";
 
 const Image = (props) => {    
     return (
-        <img src={props.src} className="meme-image" alt="meme"></img>
+        <img src={props.src} className="meme-image-display" alt="meme"></img>
     )
 }
 

@@ -1,0 +1,148 @@
+[
+    {
+        "active": true,
+        "src": "images/26jxvz.jpg",
+        "boxCount": 4,
+        "textBoxes": [
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            },
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            },
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            },
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            }
+        ]
+    },
+    {
+        "active": true,
+        "src": "images/Bernie-I-Am-Once-Again-Asking-For-Your-Support.jpg",
+        "boxCount": 1,
+        "textBoxes": [
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            }
+        ]
+    },
+    {
+        "active": true,
+        "src": "images/Change-My-Mind.jpg",
+        "boxCount": 1,
+        "textBoxes": [
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            }
+        ]
+    },
+    {
+        "active": true,
+        "src": "images/Distracted-Boyfriend.jpg",
+        "boxCount": 3,
+        "textBoxes": [
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            },
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            },
+            {
+                "left": "80px",
+                "top": "80px",
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            }
+        ]
+    },
+    {
+        "active": true,
+        "src": "images/Drake-Hotline-Bling.jpg",
+        "boxCount": 2,
+        "textBoxes": [
+            {
+                "left": 150,
+                "top": 370,
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            },
+            {
+                "left": 300,
+                "top": 370,
+                "font": {
+                    "type": "Normal",
+                    "size": "12px"
+                }
+            }
+        ]
+    },
+    {
+        "active": true,
+        "src": "images/One-Does-Not-Simply.jpg",
+        "boxCount": 2,
+        "textBoxes": [
+            {
+                "left": "80px",
+                "top": "20px",
+                "font": {
+                    "type": "shadowed",
+                    "size": "45px"
+                }
+            },
+            {
+                "left": "380px",
+                "top": "180px",
+                "font": {
+                    "type": "shadowed",
+                    "size": "45px"
+                }
+            }
+        ]
+    }
+]

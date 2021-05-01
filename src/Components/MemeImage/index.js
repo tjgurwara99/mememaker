@@ -1,111 +1,91 @@
-import React, { useState } from "react";
-import {saveAs} from "file-saver";
+import React, { useState, useEffect } from "react";
+import { saveAs } from "file-saver";
 import domtoimage from "dom-to-image";
-import Image from "../Image";
-import ImageThumbnail from "../ImageThumbnail";
+import ModalPopup from "../ModalPopup";
+import ImageList from "../ImageList";
 import "./styles.css";
 
+
 const MemeImage = (props) => {
-    const [overlayClass, setOverlayClass] = useState("overlay-hidden")
-    const [font, setFont] = useState(["arial", "helvetica"])
-    const [top, setTop] = useState(50)
-    const [left, setLeft] = useState(50)
+  const [overlayClass, setOverlayClass] = useState("overlay-hidden");
 
-
-
-    // handleModalPopup is a simple handler for the popup overlay.
-    const handleModalPopup = () => {
-        if (overlayClass === "overlay-hidden")
-            setOverlayClass("overlay")
-        else 
-            setOverlayClass("overlay-hidden")
-    }
-
-
-    // handleScreenshot is a handler for the button to download the image that we worked on.
-    const handleScreenshot = () => {
-        const elemDisplay = document.getElementById("meme-image")
-        domtoimage.toBlob(elemDisplay).then(
-            blob => {
-                saveAs(blob, "image.png");
+  const [selectedMeme, setSelectedMeme] = useState({
+    active: true,
+    src: "images/Drake-Hotline-Bling.jpg",
+    boxCount: 2,
+    textBoxes: [
+        {
+            left: 350,
+            top: 150,
+            font: {
+                type: "Normal",
+                size: "12px"
             }
-        )
-    }
+        },
+        {
+            left: 350,
+            top: 350,
+            font: {
+                type: "Normal",
+                size: "12px"
+            }
+        }
+    ]
+  });
 
-const adjustTop = () =>{
-    setTop(top-1);
-}
+  useEffect(() => {
+    setSelectedMeme({
+      active: true,
+      src: "images/Drake-Hotline-Bling.jpg",
+      boxCount: 2,
+      textBoxes: [
+          {
+              text: "Text 1",
+              left: 350,
+              top: 150,
+              font: {
+                  type: "Normal",
+                  size: "12px"
+              }
+          },
+          {
+              text: "Text 2",
+              left: 350,
+              top: 350,
+              font: {
+                  type: "Normal",
+                  size: "12px"
+              }
+          }
+      ]
+    })
+  }, [])
 
-    return (
-        <>
-        <div id="meme-image-list">
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-            <ImageThumbnail src="images/Drake-Hotline-Bling.jpg" thumbnail={true}/>
-        </div>
+  // handleModalPopup is a simple handler for the popup overlay.
+  const handleModalPopup = () => {
+    if (overlayClass === "overlay-hidden") setOverlayClass("overlay");
+    else setOverlayClass("overlay-hidden");
+  };
 
-        <button onClick={handleModalPopup}>Show</button>
+  // handleScreenshot is a handler for the button to download the image that we worked on.
+  const handleScreenshot = () => {
+    const elemDisplay = document.getElementById("meme-image");
+    domtoimage.toBlob(elemDisplay).then((blob) => {
+      saveAs(blob, "image.png");
+    });
+  };
 
-        <div id={overlayClass}>
-            <div id="popup-window">
-                <div id="meme-image">
-                    <Image src="images/Drake-Hotline-Bling.jpg" />
-                    <div className="text-box-container">
-                    <div className="text-box1" style={{position: "absolute", left: {left}, top: `${top}px`}}>Hello there</div>
-                    </div> 
-                   
-                    <div className="text-box2">What you doing?</div>
-                </div>
+  return (
+    <>
+      <ImageList />
 
-                <button onClick={adjustTop}> Top position </button>
-                <button onClick={handleScreenshot}>Get Image</button>
-                <button onClick={handleModalPopup}>Hide</button>
-            </div>        
+      <button onClick={handleModalPopup}>Show</button>
 
-            <div className="input-text-box-container">
-                 
-            </div> 
-        </div>
-
-
-        </>
-    )
-}
+      <div id={overlayClass}>
+        <ModalPopup popupHandler={handleModalPopup} screenshotHandler={handleScreenshot} meme={selectedMeme}/>
+      </div>
+    </>
+  );
+};
 
 export default MemeImage;
-
-
-
-/* 
-
-images: [
-    {
-        active: true,
-        src: "",
-        boxCount: 2,
-        textBox1: {
-            left: 80px,
-            top: 80px,
-            font: {
-                family: "arial",
-                size: 40em,
-            }
-        },
-        textBox2: {
-            left: 100px,
-            top: 100px,
-            font: {
-                family: "arial",
-                size: 40em,
-            }
-        },
-    }
-]
-
-*/
