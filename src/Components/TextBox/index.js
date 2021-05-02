@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 import "./styles.css"
 
 const TextBox = (props) => {
+    const [height, setHeight] = useState(0);
+
     return (
         <>
         <div className="meme-controls" >
@@ -36,6 +38,11 @@ const TextBox = (props) => {
                             <input type="text" value={textBox.text} onChange={(e) => {
                                 let temp = {...props.meme};
                                 temp.textBoxes[index].text = e.target.value;
+                                const ht = document.getElementById(`text-box-height-modifier-${index}`).clientHeight;
+                                if (ht !== height) {
+                                    setHeight(ht);
+                                    temp.textBoxes[index].top = temp.textBoxes[index].top - ((ht) / 10);
+                                }
                                 props.setMeme(temp);
                             }}/>
                             <Button onClick={() => {

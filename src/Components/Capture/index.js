@@ -3,6 +3,7 @@ import Image from "../Image";
 import "./styles.css"
 
 const Capture = (props) => {
+
   return (
     <div id="meme-image">
       <Image src={props.meme.src} />
@@ -11,9 +12,8 @@ const Capture = (props) => {
           props.meme.textBoxes.map((textBox, i) => (
             <div
               key={i}
-
               className={textBox.font.type}
-
+              id={`text-box-height-modifier-${i}`}
               style={{
                 position: "absolute",
                 left: `${textBox.left}px`,
