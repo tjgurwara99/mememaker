@@ -83,7 +83,11 @@ const TextBox = (props) => {
                         <div className="input-font-controller">
                             <div className="font-selection-container">
                                 <label className="font-type-label">Choose Font Type</label>
-                                <select name="font" id="font">
+                                <select name="font" id="font" value={textBox.font.type} onChange={e => {
+                                    let temp = {...props.meme};
+                                    temp.textBoxes[index].font.type = e.target.value;
+                                    props.setMeme(temp);
+                                }}>
                                     <option value="normal">Normal</option>
                                     <option value="shadowed">Shadowed</option>
                                 </select>
