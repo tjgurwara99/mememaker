@@ -18,7 +18,11 @@ const Capture = (props) => {
                 position: "absolute",
                 left: `${textBox.left}px`,
                 top: `${textBox.top}px`,
-                fontSize: `${textBox.font.size}px`
+                fontSize: `${textBox.font.size}px`,
+                transform: `rotate(${textBox.font.rotation}deg)`,
+                width: `${textBox.width}px`,
+                lineBreak: "anywhere",
+                textAlign: "center"
               }}
             >
           {textBox.text}

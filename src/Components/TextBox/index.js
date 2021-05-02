@@ -58,10 +58,18 @@ const TextBox = (props) => {
                     </div>
                     <div className="input-navigation" >
                         <div className="input-rotaters">
-                            <Button>
+                            <Button onClick={() => {
+                                let temp = {...props.meme};
+                                temp.textBoxes[index].font.rotation = textBox.font.rotation - 10;
+                                props.setMeme(temp);
+                            }}>
                                 <RotateLeftIcon />
                             </Button>
-                            <Button>
+                            <Button onClick={() => {
+                                let temp = {...props.meme};
+                                temp.textBoxes[index].font.rotation = textBox.font.rotation + 10;
+                                props.setMeme(temp);
+                            }}>
                                 <RotateRightIcon />
                             </Button>
                         </div>
@@ -74,10 +82,18 @@ const TextBox = (props) => {
                                 </select>
                             </div>
                             <div className="font-size-controller">
-                                <Button className="font-increase">
+                                <Button className="font-increase" onClick={() => {
+                                    let temp = {...props.meme};
+                                    temp.textBoxes[index].font.size = textBox.font.size + 2;
+                                    props.setMeme(temp);
+                                }}>
                                     <ExpandLessIcon />
                                 </Button>
-                                <Button className="font-decrease">
+                                <Button className="font-decrease" onClick={() => {
+                                    let temp = {...props.meme};
+                                    temp.textBoxes[index].font.size = textBox.font.size - 2;
+                                    props.setMeme(temp);
+                                }}>
                                     <ExpandMoreIcon />
                                 </Button>
                             </div>
