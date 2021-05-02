@@ -12,7 +12,7 @@ const TextBox = (props) => {
     const [height, setHeight] = useState(0);
 
     return (
-        <>
+        
         <div className="meme-controls" >
             {
                 props.meme.textBoxes.map((textBox, index) => (
@@ -114,7 +114,7 @@ const TextBox = (props) => {
                 ))
             }           
         </div>
-        </>
+        
     )
 }
 
