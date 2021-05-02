@@ -1,0 +1,16 @@
+.main-app{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 100vw;
+}
+
+.sidebar{
+    flex: 0.2;
+}
+
+.mainApp__headerAndMeme{
+    flex: 0.7;
+}
+

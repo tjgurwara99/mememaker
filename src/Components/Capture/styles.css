@@ -1,0 +1,12 @@
+#meme-image {
+    position: relative;
+    width: 30rem;
+    height: auto;
+}
+
+.shadowed {
+    color: white;
+    text-transform: uppercase;
+    text-shadow:1px 5px 10px rgba(0, 0, 0, 0.75), -1px 1px 12px rgba(0, 0, 0, 0.75);
+    
+}

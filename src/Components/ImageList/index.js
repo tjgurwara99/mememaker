@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ImageThumbnail from "../ImageThumbnail";
+import "./style.css";
+import Button from '@material-ui/core/Button';
 
 const ImageList = (props) => {
     const [data, setData] = useState([]);
@@ -19,34 +21,25 @@ const ImageList = (props) => {
     }, [])
 
     return (
-        <>
-            <div id="meme-image-list">
+            <div className="meme-image-list">
                 {
                     data.map((image, index) => (
-                        <button key={index} style={{
-                            "backgroundcolor": "Transparent",
-                            "backgroundRepeat":"no-repeat",
-                            "border": "none",
-                            "cursor":"pointer",
-                            "overflow": "hidden",
-                            "outline":"none",
-                            "background": "transparent",
+                        <Button className="meme-button" key={index} style={{
+                           
                         }}
                         onClick={
                             () => {
                                 let temp = {...image};
                                 props.setMeme(temp);
-                                props.openModal();
                             }
                         }
                         >
                             <ImageThumbnail src={image.src} key={image.src}/>
-                        </button>
+                        </Button>
                         
                     ))
                 }
             </div>
-        </>
     )
 }
 

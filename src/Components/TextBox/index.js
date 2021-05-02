@@ -6,6 +6,7 @@ import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 import RotateRightIcon from "@material-ui/icons/RotateRight";
 import Button from "@material-ui/core/Button";
+import "./styles.css"
 
 const TextBox = (props) => {
     return (
@@ -13,8 +14,9 @@ const TextBox = (props) => {
         <div className="meme-controls" >
             {
                 props.meme.textBoxes.map((textBox, index) => (
-                    <div key={index}>
+                    <div key={index} className="control-block">
                     <div className="input-controller">
+                        <div className="input-container">
                         <Button onClick={() => {
                             let temp = {...props.meme};
                             temp.textBoxes[index].top = textBox.top - 5;
@@ -22,7 +24,7 @@ const TextBox = (props) => {
                         }}>
                             <ExpandLessIcon />
                         </Button>
-                    
+                        </div>
                         <div className="input-container">
                             <Button onClick={() => {
                                 let temp = {...props.meme};
@@ -44,6 +46,7 @@ const TextBox = (props) => {
                                 <ArrowRightIcon />
                             </Button>
                         </div>
+                        <div className="input-container">
                         <Button onClick={() => {
                             let temp = {...props.meme};
                             temp.textBoxes[index].top = textBox.top + 5;
@@ -51,31 +54,32 @@ const TextBox = (props) => {
                         }}>
                             <ExpandMoreIcon />
                         </Button>
+                        </div>
                     </div>
                     <div className="input-navigation" >
                         <div className="input-rotaters">
-                            <button>
+                            <Button>
                                 <RotateLeftIcon />
-                            </button>
-                            <button>
+                            </Button>
+                            <Button>
                                 <RotateRightIcon />
-                            </button>
+                            </Button>
                         </div>
                         <div className="input-font-controller">
                             <div className="font-selection-container">
-                                <label>Choose Font Type</label>
+                                <label className="font-type-label">Choose Font Type</label>
                                 <select name="font" id="font">
                                     <option value="normal">Normal</option>
                                     <option value="shadowed">Shadowed</option>
                                 </select>
                             </div>
                             <div className="font-size-controller">
-                                <button className="font-increase">
+                                <Button className="font-increase">
                                     <ExpandLessIcon />
-                                </button>
-                                <button className="font-decrease">
+                                </Button>
+                                <Button className="font-decrease">
                                     <ExpandMoreIcon />
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     </div>

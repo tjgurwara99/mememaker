@@ -1,0 +1,74 @@
+.meme-controls {
+    /* padding: 3em; */
+    overflow-y: scroll;
+    width: auto;
+    height: calc(100vh - 15em);
+}
+
+.control-block {
+    position: relative;
+    border: darkgray;
+    border-style: inset;
+    margin: 3em;
+}
+
+.input-controls {
+    border-top: 2px dashed;
+    margin-top: 10px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.input-rotaters {
+    flex: 0.1;
+    padding: 1em;
+}
+
+.input-rotaters button {
+    margin: 2px;
+    border-radius: 99px;
+    border: none;
+}
+
+.input-font-controller {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0.7;
+}
+
+.font-size-controller {
+    display: flex;
+    flex-direction: column;
+}
+
+.font-size-controller button {
+    margin: 2px;
+    border-radius: 99px;
+    border: none;
+}
+
+.font-selection-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: auto;
+    padding: 1em;
+}
+
+.font-type-label {
+    text-align: center;
+    padding: 2px; 
+    margin: 2px;
+}

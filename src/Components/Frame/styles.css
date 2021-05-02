@@ -1,0 +1,25 @@
+.editor-frame {
+    display: flex;
+    flex: auto;
+    /* flex-direction: column; */
+    padding: 3em;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.download-button {
+    padding: 3em;
+    align-self: center;
+}
+
+.image-container-download-button {
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+}
+
+.image-container {
+    align-self: center;
+    padding: 3em;
+}
+

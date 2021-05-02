@@ -9,7 +9,7 @@
                 "left": 160,
                 "top": 80,
                 "font": {
-                    "type": "Normal",
+                    "type": "normal",
                     "size": 12
                 }
             },
@@ -18,7 +18,7 @@
                 "left": 400,
                 "top": 80,
                 "font": {
-                    "type": "Normal",
+                    "type": "normal",
                     "size": 12
                 }
             },
