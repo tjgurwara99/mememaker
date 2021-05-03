@@ -1,19 +1,11 @@
 .meme-image-list{
-    /* display: flex; */
-    /* flex: 0.5; */
     width: 15em;
-    /* flex-direction: column; */
     overflow-y: scroll;
     float: left;
-    height: calc(100vh - 15em);
+    height: calc(100vh - 5em);
 }
 
 .meme-button {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+    padding: 5px;
+    outline: darkgray;
 }
-

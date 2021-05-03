@@ -8,7 +8,11 @@ import "./styles.css";
 
 
 const MemeMaker = (props) => {
-  const [selectedMeme, setSelectedMeme] = useState({textBoxes: []});
+  const [selectedMeme, setSelectedMeme] = useState({
+    active: true,
+    src: "images/placeholder.jpg",
+    textBoxes: []
+  });
 
   // handleScreenshot is a handler for the button to download the image that we worked on.
   const handleScreenshot = () => {

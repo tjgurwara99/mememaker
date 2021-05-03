@@ -1,5 +1,10 @@
 .meme-image-thumbnail {
     width: 10rem;
-    height: auto;
+    height: 10rem;
     margin: 1rem;
+}
+
+.disabled {
+    filter: grayscale(100%);
+    opacity: 0.7;
 }
