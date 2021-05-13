@@ -10,9 +10,9 @@ statically served file within react.
 To run the app, just use `npm start` in the main root directory where the `package.json` file exists.
 If `npm` is not installed on your system, simply install it using your systems package manager, example:
 
-. for MacOs: `brew install node`
-. for Debian based linux(eg Ubuntu): `apt-get install nodejs` - you may need to have root privileges
-. for Arch based linux: `pacman -S nodejs`
+1. for MacOs: `brew install node`
+2. for Debian based linux(eg Ubuntu): `apt-get install nodejs` - you may need to have root privileges
+3. for Arch based linux: `pacman -S nodejs`
 
 Once the command `npm start` starts, it will open a development server for you to access in your browser.
 Which means you can see the work in this repository by going to [this link](http://localhost:3000).
